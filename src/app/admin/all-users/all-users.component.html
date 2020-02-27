@@ -1,0 +1,31 @@
+<mat-accordion *ngFor="let elem of data; let i=index" class="animated bounceInRight slow">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       {{elem.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{elem.uuid}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <button class="btn btn-success my-button" (click)="onEditUser(elem.name, i, elem.uuid)" >Edit</button>
+    <button class="btn btn-danger my-button" (click)="onDeleteUser(elem.uuid, i)">Delete user</button>
+    <button class="btn btn-primary my-button">Open contacts</button>
+
+
+  </mat-expansion-panel>
+  <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel> -->
+</mat-accordion>

@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-around fixed-bottom bottom-menu bg-light" >
+  <!-- <div>
+    <a routerLink="profile"  > <img class="left-menu-image" [src]="profilePath" alt="profile"></a>
+  </div>
+
+
+
+      <div class="p-2 animated fadeInLeftBig slow my-img" *ngIf="getCurRole()=== 'admin'">
+      <a routerLink="/admin/all-users" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+    </div> -->
+
+    <div class="p-2 animated fadeInLeftBig slow my-img">
+      <a routerLink="/"> <img class="left-menu-image" [src]="friendsPath" alt="profile"></a>
+    </div>
+    <div class="p-2 animated fadeInLeftBig slow my-img" *ngIf="getCurRole()=== admin">
+      <a routerLink="/admin/all-users" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+    </div>
+
+
+</div>
+

@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container-fluid" >
+  <div class="row" style="height: 950px;">
+    <div class="col-sm-2  sides">
+      <div class="sidenav" *ngIf="isAuth">
+        <app-left-menu></app-left-menu>
+      </div>
+    </div>
+
+    <div class=" col-12 col-sm-8 center">
+
+      <router-outlet></router-outlet>
+
+        <br>
+        <br>
+        <br><br><br><br><br>
+    </div>
+
+    <div class=" col-sm-2 sides"></div>
+
+  </div>
+
+
+</div>
+
+<app-bottom-menu class=" bottom-menu" *ngIf="isAuth" > </app-bottom-menu>

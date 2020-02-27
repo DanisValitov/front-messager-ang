@@ -1,0 +1,13 @@
+mat-card{
+  margin: 5% auto;
+  min-width: 20vw;
+  text-align: center;
+}
+
+mat-card:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: aquamarine;
+}
+
+

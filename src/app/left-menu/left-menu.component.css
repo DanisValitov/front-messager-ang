@@ -1,0 +1,32 @@
+.left-menu {
+  margin-top: 50%;
+}
+
+.left-menu-image {
+  /* width: 5%; */
+  width: 6vw;
+  margin: auto ;
+  border-radius: 40px;
+}
+.my-img {
+
+}
+
+.left-menu-link {
+  margin-top: 20px;
+}
+
+.left-menu-image:hover {
+  cursor: pointer;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+  transform: scale(1.2);
+
+}
+.elem {
+  margin:auto;
+  width: 80%;
+}
+a {
+  margin: auto;
+}
+

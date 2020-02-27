@@ -1,0 +1,14 @@
+<div *ngIf="data">
+  <div class="container" *ngFor="let cont of data; let i = index">
+    <div  class="row" *ngIf="cont.uuid !== getCurUser()" class="animated bounceInRight slow">
+
+      <mat-card (click)="openChat(cont)">
+
+        {{ cont.name }}
+
+      </mat-card>
+
+    </div>
+  </div>
+</div>
+

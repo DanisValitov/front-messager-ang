@@ -1,0 +1,74 @@
+
+<mat-spinner *ngIf = "isLoading"></mat-spinner>
+<!-- <mat-accordion  multi="true" *ngIf="posts.length > 0 && !isLoading">
+  <mat-expansion-panel [expanded]='true' *ngFor="let post of posts">
+    <div class="animated zoomIn slower">
+    <mat-expansion-panel-header>
+      {{ post.title }}
+    </mat-expansion-panel-header>
+    <div class="post-image">
+      <img [src]="post.imagePath" alt="post.title">
+    </div>
+    <hr>
+    <p class="jumbotron">{{ post.content }}</p>
+    <mat-action-row *ngIf="isAuth && userId === post.creator">
+      <a
+        mat-button
+        [routerLink]="['/edit', post._id]"
+        color="primary"
+        >EDIT</a>
+      <button
+        mat-button
+        color="warn"
+        (click) = "onDelete(post._id)"
+        >DELETE</button>
+    </mat-action-row>
+    </div>
+
+  </mat-expansion-panel>
+</mat-accordion> -->
+<div *ngIf="posts.length > 0 && !isLoading">
+  <div *ngFor="let post of posts" style="margin-bottom: 20px;">
+  <mat-card class="example-card animated zoomIn slow">
+    <mat-card-header style="margin-bottom: 10px;">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>  {{ post.title }} </mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <div class="container-fluid"  >
+      <img mat-card-image [src]="post.imagePath" alt="post.title" >
+    </div>
+
+    <mat-card-content class="jumbotron" >
+      <p>
+        {{ post.content }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-icon-button color="accent" aria-label="Example icon-button with a heart icon"  >
+        <mat-icon matBadge="15" matBadgeColor="warn" class="bottom-btn">favorite</mat-icon>
+      </button>
+
+      <button mat-icon-button color="primary" aria-label="Example icon-button with a heart icon">
+        <mat-icon class="bottom-btn">card_giftcard</mat-icon>
+      </button>
+      <mat-action-row *ngIf="isAuth && userId === post.creator">
+        <a style="margin-right: 10px;"
+          mat-button
+          [routerLink]="['/edit', post._id]"
+          color="primary"
+          >EDIT</a>
+        <button style="margin-right: 10px;"
+          mat-button
+          color="warn"
+          (click) = "onDelete(post._id)"
+          >DELETE</button>
+      </mat-action-row>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
+
+
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No posts added yet!</p>

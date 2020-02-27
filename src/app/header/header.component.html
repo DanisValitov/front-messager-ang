@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <!-- <a class="animated fadeInDownBig fast"
+    routerLink = "/"
+    mat-fab color="accent">Posts</a> -->
+<mat-panel-title class="animated fadeIn slow">
+  <img [src]="dovaPath" alt="dova" style="height: 8vh;">
+   <span>Dovalinker</span>
+   <span class="userName"> {{profileName}}</span>
+</mat-panel-title>
+
+  <!-- <p>  </p> -->
+  <!-- <a class="animated fadeInDownBig fast"
+    *ngIf = "isAuth"
+    style="margin-left: 10px;"
+    routerLink = "/create"
+    mat-mini-fab color="warn">New</a> -->
+
+  <div class="header animated animated fadeIn slower">
+    <a *ngIf = "!isAuth" routerLink="/auth/login" class="  login-button" style="right: 10px;">
+      <img class="header-image" [src]="loginPath" alt="login" style="height: 10vh;"></a>
+
+      <a *ngIf = "isAuth" routerLink="/auth/login" (click) = "onLogout()" class="  login-button" style="right: 10px;">
+        <img class="header-image" [src]="logoutPath" alt="logout" style="height: 6vh;"></a>
+    <!-- <a
+    class="login-button"
+    routerLink = "/auth/login"
+    mat-raised-button
+    color="accent"
+    *ngIf = "!isAuth">Login</a>
+    <button
+    (click) = "onLogout()"
+    class="login-button"
+    mat-raised-button
+    color="accent"
+    *ngIf = "isAuth">Logout</button> -->
+  </div>
+
+</mat-toolbar>
+
+
+
+
+

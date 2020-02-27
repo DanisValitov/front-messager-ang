@@ -1,0 +1,44 @@
+.login-button{
+   margin-right: 10px;
+   margin-left: auto;
+   /* right: 10px; */
+   position: relative;
+
+ }
+
+ .header-image:hover {
+
+  transform: scale(1.1);
+
+}
+
+.userName {
+  color: rgb(55, 172, 201);
+  text-shadow: yellowgreen ;
+  font-style: italic;
+
+  margin-left: 20%;
+}
+
+ .header {
+  display: inline-flex;
+  justify-content: right;
+  width: 100%;
+ }
+
+ @media only screen and (max-width: 576px) {
+  .userName {
+    /* color: rgb(55, 172, 201);
+    text-shadow: yellowgreen ;
+    font-style: italic;
+    font-size: smaller; */
+    margin-left: 10%;
+  }
+  mat-panel-title {
+    /* color: rgb(55, 172, 201).; */
+    /* text-shadow: yellowgreen .; */
+    font-style: italic;
+    font-size: small;
+    /* padding-left: 5%; */
+  }
+ }

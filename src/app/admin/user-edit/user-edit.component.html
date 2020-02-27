@@ -1,0 +1,40 @@
+<div class="container edituuser-dialog animated bounceInUp slow">
+  <h1 mat-dialog-title>Editing name: </h1>
+  <p class="mat-body-1">{{ data.name }}</p>
+  <hr>
+  <div mat-dialog-content>
+    <form [formGroup] = "form" (submit)="onCheck()" class="example-form" >
+      <div class="row">
+        <div class="col-9">
+          <mat-form-field class="example-full-width">
+            <input
+            matInput
+            rows="4"
+            formControlName="message"
+            placeholder="new email...">
+
+            <mat-error *ngIf="form.get('message').invalid">Please provide a new email</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <button style="margin-top: 30%; margin-left: 30%;"
+          mat-raised-button
+          color="accent"
+          type="submit">Check</button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      (click)="onUpdate()"
+      [disabled]="!isChecked"
+      color="primary"
+      mat-raised-button mat-dialog-close
+      style="margin: auto;"
+      >OK</button>
+  </div>
+
+</div>

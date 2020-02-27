@@ -1,0 +1,69 @@
+<!-- <div class="d-flex justify-content-around">
+  <div class="elem animated fadeInUpBig slow">
+    <a routerLink="profile"  > <img class="left-menu-image" [src]="profilePath" alt="profile"></a>
+  </div>
+<div class="elem animated fadeInUpBig slow">
+  <a > <img class="left-menu-image" [src]="friendsPath" alt="profile"></a>
+</div>
+<div class="elem animated fadeInUpBig slow">
+  <a > <img class="left-menu-image" [src]="messagesPath" alt="profile"></a>
+</div>
+<div class="elem animated fadeInUpBig slow">
+  <a routerLink="/" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+</div>
+<div class="elem animated fadeInUpBig slow" >
+  <a routerLink="/create" > <img class="left-menu-image" [src]="newPostPath" alt="profile"></a>
+</div>
+
+
+
+
+</div> -->
+
+<!-- <div class="container">
+  <div class=" elem animated fadeInLeftBig slow">
+    <a routerLink="profile"  > <img class="left-menu-image" [src]="profilePath" alt="profile"></a>
+  </div>
+<div class="elem animated fadeInLeftBig slow">
+  <a > <img class="left-menu-image" [src]="friendsPath" alt="profile"></a>
+</div>
+<div class=" elem animated fadeInLeftBig slow">
+  <a > <img class="left-menu-image" [src]="messagesPath" alt="profile"></a>
+</div>
+<div class="elem animated fadeInLeftBig slow">
+  <a routerLink="/" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+</div>
+<div class="elem animated fadeInLeftBig slow" >
+  <a routerLink="/create" > <img class="left-menu-image" [src]="newPostPath" alt="profile"></a>
+</div>
+</div> -->
+
+<div class="container">
+  <div class="d-flex flex-column justify-content-around">
+    <!-- <div class="p-2 animated fadeInLeftBig slow my-img" >
+      <a (click)="openMyProfile()"  > <img class="left-menu-image" [src]="profilePath" alt="profile"></a>
+    </div> -->
+    <div class="p-2 animated fadeInLeftBig slow my-img">
+      <a routerLink="/"> <img class="left-menu-image" [src]="friendsPath" alt="profile"></a>
+    </div>
+    <div class="p-2 animated fadeInLeftBig slow my-img" *ngIf="getCurRole()=== admin">
+      <a routerLink="/admin/all-users" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+    </div>
+    <!-- <div class="p-2 animated fadeInLeftBig slow my-img">
+      <a > <img class="left-menu-image" [src]="messagesPath" alt="profile"></a>
+    </div>
+    <div class="p-2 animated fadeInLeftBig slow my-img">
+      <a routerLink="/" > <img class="left-menu-image" [src]="postsPath" alt="profile"></a>
+    </div>
+    <div class="p-2 animated fadeInLeftBig slow my-img" style="margin-top: auto;">
+      <a routerLink="/create" > <img class="left-menu-image" [src]="newPostPath" alt="profile"></a>
+    </div> -->
+  </div>
+
+</div>
+
+
+
+
+
+
